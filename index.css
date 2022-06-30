@@ -1,0 +1,288 @@
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: hsl(210, 46%, 95%);
+}
+
+/* Generic Styling  */
+
+.article-main, .article_name{
+    font-weight: 700;
+}
+
+.article-summary, .article_date{
+    color: hsl(214, 17%, 51%);
+}
+
+.container{
+    border-radius: 1em;
+}
+
+.drawer-image{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+/* Mobile Section */
+
+    /* Drawer Image */
+    
+.container{
+    max-width: 400px;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    background-color: white;
+}
+
+.drawer-image{
+    height: 225px;
+    width: 400px;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+    /* Article */
+
+
+.article-main, .article-summary{
+    width: 77%;
+    margin: auto;
+}
+
+.article-main{
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.article-summary{
+    font-size: 0.9rem;
+    margin-bottom: 2em;
+}
+
+    /* Contact */
+
+.article_image_container{
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: 11.5%;
+}
+
+.article_share{
+    margin-right: 9.5%;
+    height: 40px;
+}
+
+.article_image_michelle{
+    border-radius: 2em;
+}
+
+.article_author{
+    font-size: 0.9rem;
+    margin-right: 7.5em;
+}
+
+.article_share{
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 1em;
+    margin-top: 1.2em;
+    cursor: pointer;
+    display: flex;
+    height: 2em;
+    padding: 0.5em 0.5em 0em 0.5em;
+    z-index: 1;
+}
+
+.share-button1, .share-button2{
+padding: 0;
+margin: 0;
+
+}
+
+
+/* Share */
+
+.article-share{
+    display: flex;
+    position: relative;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+
+/* Share Buttons */
+
+.share{
+    font-weight: 500;
+    font-size: 1rem;
+    color: hsl(212, 23%, 69%);
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.share_button_container{
+    display: flex;
+    margin-left: 11.5%;
+    margin-top: 0.7em;
+   
+}
+
+.share-buttons{
+    margin-left: 0.5em;
+}
+
+.pins{
+    margin-left: 1em;
+}
+
+.twit{
+    margin-left: 1em;
+    margin-top: 0.1em;
+}
+
+.fb2{
+    margin-left: 1.3em;
+}
+
+a{
+    font-size: 0;
+}
+
+.article_share2{
+    margin-top: 0.2em;
+}
+
+
+.article-contact{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 1.5em;
+    padding-top: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+
+.article-contact2{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 1.5em;
+    padding-top: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    height: 80px;
+    background-color: hsl(217, 19%, 35%);
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    pointer-events: none;
+}
+
+
+
+/* Toggle */
+
+
+.article-toggle2{
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.article_toggle_2{
+    background-color: hsl(214, 17%, 51%);
+}
+
+/* Desktop */
+
+@media(min-width: 1024px){
+
+   .container{
+        display: flex; 
+        max-width: 100%;
+        width: 900px;
+        margin-top: 7.5em;
+   }
+
+   /* Image */
+
+   .container-image{
+       height: 21.875em;
+   }
+
+    .drawer-image{
+       object-position: left;
+       width: 375px;
+       height: 21.875em;
+       border-radius: 1em 0 0 1em;
+    }
+  
+    /* Article */
+
+    .article-main{
+        margin-top: 2.8em;
+    }
+
+    .article{
+        width: 35em;
+    }
+
+    .article_author{
+        margin-right: 15.5em;
+    }
+
+    /* Share */
+
+    .article-contact2{
+        margin: 0;
+        width: 250px;
+        margin-left: 21.5em;
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+        border-radius: 0.5em;
+        height: 60px;
+        background-color: hsl(217, 19%, 35%);
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+        pointer-events: none;
+        transform: translate(3px, -70px);
+    }
+
+    
+    /* Toggle */
+
+    .article-toggle2{
+        opacity: 1;
+        pointer-events: visible;
+    }
+
+    .article-contact2::after{
+        content: "";
+        border-top: 10px solid hsl(217, 19%, 35%);
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        transform: translate(-115px, 52px)
+       
+    }
+    
+
+}
+
